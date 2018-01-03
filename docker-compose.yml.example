@@ -1,0 +1,11 @@
+version: '2'
+services:
+  mailarchiva:
+    image: 'mailarchiva'
+    ports:
+      - '8090:8090'
+      - '8091:8091'
+    volumes:
+      - ./data/config:/etc/opt/mailarchiva
+      - ./data/appdata:/var/opt/mailarchiva/ROOT
+      - ./data/storage:/var/opt/vol
