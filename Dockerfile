@@ -33,6 +33,6 @@ EXPOSE 8091
 EXPOSE 8092
 
 # cleanup
-RUN apt-get remove -yf expect wget 
+RUN apt-get remove -yf expect wget && apt-get autoremove -y 
 RUN apt-get autoclean && rm -rf /var/lib/apt/lists/* /tmp/* /var/tmp/*
 RUN rm -rf /usr/share/locale/* /usr/share/man/* /usr/share/doc/*
