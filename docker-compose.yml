@@ -5,6 +5,8 @@ services:
       context: .
     hostname: mailarchiva
     restart: always
+    environment:
+      - TZ=Europe/Berlin
     ports:
       - '8090:8090'
       - '8091:8091'
