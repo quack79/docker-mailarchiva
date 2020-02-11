@@ -1,7 +1,7 @@
 FROM phusion/baseimage:0.9.22
 
 # Version: 5.4.1
-ENV MAILARCHIVA_BASE_URL https://mailarchiva.com/download?id=1020
+ENV MAILARCHIVA_BASE_URL https://mailarchiva.com/download?id=2224
 ENV MAILARCHIVA_INSTALL_DIR /opt
 ENV MAILARCHIVA_HEAP_SIZE 2048m
 
@@ -9,7 +9,7 @@ ENV MAILARCHIVA_HEAP_SIZE 2048m
 CMD ["/sbin/my_init"]
 
 RUN apt-get update
-RUN apt-get install -y expect wget iproute
+RUN apt-get install -y expect wget iproute vim tzdata
 
 # Get the mailarchiva package and extract it
 RUN wget -q -O - $MAILARCHIVA_BASE_URL | tar xzf - -C $MAILARCHIVA_INSTALL_DIR
