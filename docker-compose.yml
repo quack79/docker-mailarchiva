@@ -1,7 +1,10 @@
 version: '2'
 services:
   mailarchiva:
-    image: 'mailarchiva'
+    build: 
+      context: .
+    hostname: mailarchiva
+    restart: always
     ports:
       - '8090:8090'
       - '8091:8091'
