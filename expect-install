@@ -18,7 +18,7 @@
 # character to toggle this mode off and on.
 
 set force_conservative 0  ;# set to 1 to force conservative mode even if
-			  ;# script wasn't run conservatively originally
+                          ;# script wasn't run conservatively originally
 if {$force_conservative} {
 	set send_slow {1 .1}
 	proc send {ignore arg} {
@@ -49,6 +49,6 @@ expect -exact "Press \[enter\] to read the license agreement..."
 send -- "\r "
 expect -exact "Do you agree to the terms of the agreement (yes/no)? "
 send -- "yes\r"
-expect -exact "Max heap size \[2048m-23840m\]?:"
+expect -exact "Max heap size \[512m-11572m\]?:"
 send -- "2048m\r"
 expect eof

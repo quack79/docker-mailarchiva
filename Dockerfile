@@ -1,9 +1,9 @@
 FROM phusion/baseimage:0.9.22
 
-# Version: 5.4.1
-ENV MAILARCHIVA_BASE_URL https://mailarchiva.com/download?id=2224
-ENV MAILARCHIVA_INSTALL_DIR /opt
-ENV MAILARCHIVA_HEAP_SIZE 2048m
+# Version: 9.0.26
+ENV MAILARCHIVA_BASE_URL=https://stimulussoft.b-cdn.net/mailarchiva-server-linux-v9.0.26.tar.gz
+ENV MAILARCHIVA_INSTALL_DIR=/opt
+ENV MAILARCHIVA_HEAP_SIZE=2048m
 
 # @see http://phusion.github.io/baseimage-docker/
 CMD ["/sbin/my_init"]

@@ -1,15 +1,14 @@
-version: '2'
 services:
   mailarchiva:
-    build: 
-      context: .
+    image: quack79/mailarchiva:9.0.26
+    container_name: mailarchiva
     hostname: mailarchiva
-    restart: always
+    restart: unless-stopped
     environment:
-      - TZ=Europe/Berlin
+      - TZ=Europe/London
     ports:
-      - '8090:8090'
-      - '8091:8091'
+      - 8090:8090
+      - 8091:8091
     volumes:
       - ./data/config:/etc/opt/mailarchiva
       - ./data/appdata:/var/opt/mailarchiva/ROOT
