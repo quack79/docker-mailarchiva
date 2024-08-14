@@ -1,6 +1,6 @@
-FROM phusion/baseimage:0.9.22
+FROM phusion/baseimage:jammy-1.0.4
 
-# Version: 9.0.26
+# Updated to version: 9.0.26
 ENV MAILARCHIVA_BASE_URL=https://stimulussoft.b-cdn.net/mailarchiva-server-linux-v9.0.26.tar.gz
 ENV MAILARCHIVA_INSTALL_DIR=/opt
 ENV MAILARCHIVA_HEAP_SIZE=2048m
