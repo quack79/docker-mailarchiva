@@ -9,7 +9,7 @@ ENV MAILARCHIVA_HEAP_SIZE=2048m
 CMD ["/sbin/my_init"]
 
 RUN apt-get update
-RUN apt-get install -y expect wget iproute vim tzdata
+RUN apt-get install -y expect wget iproute2 vim tzdata
 
 # Get the mailarchiva package and extract it
 RUN wget -q -O - $MAILARCHIVA_BASE_URL | tar xzf - -C $MAILARCHIVA_INSTALL_DIR
