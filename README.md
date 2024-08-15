@@ -1,3 +1,5 @@
+NOT CURRENTLY WORKING PROPERLY!!
+
 # Dockerized mailarchiva installation
 
 https://www.mailarchiva.com/ 
